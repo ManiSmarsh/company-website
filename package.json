@@ -1,4 +1,7 @@
 {
   "name": "static-site",
-  "private": true
+  "private": true,
+  "scripts": {
+    "build": "echo 'No build needed for static HTML'"
+  }
 }
