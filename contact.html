@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us | Company Name</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/custom.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+  <div class="container">
+    <a class="navbar-brand fw-bold text-success" href="index.html">CompanyName</a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="facility.html">Facility</a></li>
+        <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+        <li class="nav-item"><a class="nav-link active" href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- PAGE HEADER -->
+<section class="page-header text-white">
+  <div class="container text-center">
+    <h1 class="fw-bold">Contact Us</h1>
+    <p class="mt-2">We’d love to hear from you</p>
+  </div>
+</section>
+
+<!-- ================= CONTACT DETAILS ================= -->
+<section class="py-5">
+  <div class="container">
+    <div class="row g-4">
+
+      <!-- Office Address -->
+      <div class="col-md-4">
+        <div class="customer-card h-100">
+          <h5 class="fw-bold text-success">Office Address</h5>
+          <p class="mb-0">
+            Company Name<br>
+            Office Address Line 1<br>
+            City, State – Pincode<br>
+            Country
+          </p>
+        </div>
+      </div>
+
+      <!-- Works Address -->
+      <div class="col-md-4">
+        <div class="customer-card h-100">
+          <h5 class="fw-bold text-success">Works Address</h5>
+          <p class="mb-0">
+            Manufacturing Unit<br>
+            Works Address Line 1<br>
+            Industrial Area, City<br>
+            State – Pincode
+          </p>
+        </div>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="col-md-4">
+        <div class="customer-card h-100">
+          <h5 class="fw-bold text-success">Contact Information</h5>
+          <p class="mb-1"><strong>Email:</strong> info@companyname.com</p>
+          <p class="mb-1"><strong>Phone:</strong> +91 98765 43210</p>
+          <p class="mb-0"><strong>Phone:</strong> +91 12345 67890</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= LOCATION MAP ================= -->
+<section class="py-5 bg-light-green">
+  <div class="container">
+    <h2 class="fw-bold text-center mb-4">Our Location</h2>
+    <div class="ratio ratio-16x9 rounded shadow">
+      <iframe 
+        src="https://www.google.com/maps?q=India&output=embed"
+        style="border:0;"
+        allowfullscreen
+        loading="lazy">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ENQUIRY FORM ================= -->
+<section class="py-5 position-relative" style="background: linear-gradient(135deg, #f5f7fa 0%, #e8f5e9 100%);">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="badge bg-success px-4 py-2 mb-3">Get In Touch</span>
+      <h2 class="fw-bold mb-3" style="background: linear-gradient(135deg, #1B8A5A, #2ECC71); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Drop an Enquiry</h2>
+      <p class="text-muted">Fill out the form below and we'll get back to you shortly</p>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div class="modern-form-container">
+          <form class="row g-4">
+
+            <div class="col-md-6">
+              <div class="modern-input-wrapper">
+                <label class="modern-label">👤 Full Name *</label>
+                <input type="text" class="modern-input" required>
+                <div class="input-line"></div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="modern-input-wrapper">
+                <label class="modern-label">💼 Designation</label>
+                <input type="text" class="modern-input">
+                <div class="input-line"></div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="modern-input-wrapper">
+                <label class="modern-label">🏢 Company Name</label>
+                <input type="text" class="modern-input">
+                <div class="input-line"></div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="modern-input-wrapper">
+                <label class="modern-label">📍 Address</label>
+                <input type="text" class="modern-input">
+                <div class="input-line"></div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="modern-input-wrapper">
+                <label class="modern-label">📧 Email Address *</label>
+                <input type="email" class="modern-input" required>
+                <div class="input-line"></div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="modern-input-wrapper">
+                <label class="modern-label">📱 Phone Number *</label>
+                <input type="tel" class="modern-input" required>
+                <div class="input-line"></div>
+              </div>
+            </div>
+
+            <div class="col-12">
+              <div class="modern-input-wrapper">
+                <label class="modern-label">📝 Subject</label>
+                <input type="text" class="modern-input">
+                <div class="input-line"></div>
+              </div>
+            </div>
+
+            <div class="col-12">
+              <div class="modern-input-wrapper">
+                <label class="modern-label">💬 Your Message</label>
+                <textarea class="modern-input modern-textarea" rows="5"></textarea>
+                <div class="input-line"></div>
+              </div>
+            </div>
+
+            <div class="col-12 text-center mt-5">
+              <button type="submit" class="modern-submit-btn">
+                <span class="btn-content">
+                  <span class="btn-text">Send Message</span>
+                  <span class="btn-icon">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                      <path d="M2 10L18 10M18 10L12 4M18 10L12 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </span>
+                </span>
+                <div class="btn-shine"></div>
+              </button>
+              <p class="text-muted mt-3 small">We'll respond within 24 hours</p>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Floating shapes background -->
+  <div class="floating-shapes">
+    <div class="shape shape-1"></div>
+    <div class="shape shape-2"></div>
+    <div class="shape shape-3"></div>
+  </div>
+</section>
+
+<!-- ================= DIGITAL PRESENCE ================= -->
+<section class="py-5 bg-light-green">
+  <div class="container text-center">
+    <h2 class="fw-bold mb-4">Digital Presence</h2>
+
+    <div class="d-flex justify-content-center gap-4">
+      <a href="#" class="btn btn-outline-success">Facebook</a>
+      <a href="#" class="btn btn-outline-success">Twitter</a>
+      <a href="#" class="btn btn-outline-success">LinkedIn</a>
+      <a href="#" class="btn btn-outline-success">Instagram</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="py-4 bg-white border-top text-center">
+  <p class="mb-0 text-muted">© 2026 Company Name. All Rights Reserved.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
