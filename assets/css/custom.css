@@ -725,6 +725,13 @@ footer::before {
 .badge {
   animation: float 3s ease-in-out infinite;
   box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+}
+
+.badge:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(27, 138, 90, 0.4);
+  animation: pulse 0.6s ease-in-out infinite;
 }
 
 @keyframes float {
@@ -2578,3 +2585,473 @@ h1, h2, h3 {
   }
 }
 
+
+/* ================= ENHANCED HOVER ANIMATIONS ================= */
+
+/* Image Hover Effects - Add brightness and depth */
+img {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.img-fluid:hover {
+  transform: scale(1.02);
+  filter: brightness(1.05);
+}
+
+/* Link Hover Effects - Smooth underline animation */
+a:not(.btn):not(.nav-link):not(.navbar-brand) {
+  position: relative;
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:not(.btn):not(.nav-link):not(.navbar-brand)::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #1B8A5A, #2ECC71);
+  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+a:not(.btn):not(.nav-link):not(.navbar-brand):hover::after {
+  width: 100%;
+}
+
+a:not(.btn):not(.nav-link):not(.navbar-brand):hover {
+  color: #1B8A5A;
+}
+
+/* Form Input Hover & Focus Effects */
+.form-control,
+.form-select {
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.form-control:hover:not(:focus),
+.form-select:hover:not(:focus) {
+  border-color: #1B8A5A;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(27, 138, 90, 0.1);
+}
+
+/* Heading Hover Effects */
+h1, h2, h3, h4, h5, h6 {
+  transition: all 0.3s ease;
+}
+
+section h2:hover,
+section h3:hover {
+  transform: scale(1.02);
+  color: #1B8A5A;
+}
+
+/* Icon/Emoji Bounce on Hover */
+.tech-icon,
+.solution-icon,
+.industry-icon,
+.capacity-icon,
+.whatsapp-icon-large {
+  cursor: pointer;
+  display: inline-block;
+}
+
+.tech-icon:hover,
+.solution-icon:hover,
+.industry-icon:hover,
+.capacity-icon:hover {
+  animation: iconBounce 0.6s ease-in-out;
+}
+
+@keyframes iconBounce {
+  0%, 100% { transform: scale(1) rotate(0deg); }
+  25% { transform: scale(1.1) rotate(-5deg); }
+  50% { transform: scale(1.15) rotate(5deg); }
+  75% { transform: scale(1.1) rotate(-3deg); }
+}
+
+/* Image Containers - Enhanced Zoom Effect */
+.glass-card img:hover,
+.product-box img:hover,
+.facility-image-card img:hover {
+  filter: brightness(1.1) contrast(1.05);
+}
+
+/* List Item Hover Effects */
+ul:not(.navbar-nav) li {
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+ul:not(.navbar-nav):not(.parameter-list):not(.dropdown-menu) li:hover {
+  transform: translateX(5px);
+  color: #1B8A5A;
+}
+
+ul:not(.navbar-nav):not(.parameter-list):not(.dropdown-menu) li::before {
+  content: '';
+  position: absolute;
+  left: -15px;
+  top: 50%;
+  transform: translateY(-50%) scale(0);
+  width: 6px;
+  height: 6px;
+  background: #1B8A5A;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+ul:not(.navbar-nav):not(.parameter-list):not(.dropdown-menu) li:hover::before {
+  transform: translateY(-50%) scale(1);
+}
+
+/* Section Background Hover - Subtle gradient shift */
+section {
+  transition: background-color 0.5s ease;
+}
+
+/* Card Shadow Depth Animation */
+.tech-card,
+.category-card,
+.solution-card,
+.industry-card,
+.cert-card,
+.gallery-card,
+.whatsapp-cta-card,
+.glass-card,
+.stylish-card,
+.product-box {
+  will-change: transform;
+}
+
+/* Smooth Scroll Behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Text Selection Styling */
+::selection {
+  background-color: #1B8A5A;
+  color: white;
+}
+
+::-moz-selection {
+  background-color: #1B8A5A;
+  color: white;
+}
+
+/* Cursor Pointer for Interactive Elements */
+.tech-card,
+.category-card,
+.solution-card,
+.industry-card,
+.cert-card,
+.gallery-card,
+.gallery-item,
+.product-box,
+.capacity-card {
+  cursor: pointer;
+}
+
+/* Enhanced Button Ripple Effect */
+.btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.6);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s ease, height 0.6s ease;
+  pointer-events: none;
+}
+
+.btn:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+/* Navbar Item Pulse on Hover */
+.nav-link.active {
+  animation: navPulse 2s ease-in-out infinite;
+}
+
+@keyframes navPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
+}
+
+/* Footer Link Hover */
+footer a:hover {
+  color: #1B8A5A !important;
+  transform: translateX(5px);
+}
+
+/* Image Loading Fade In */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+img {
+  animation: fadeIn 0.5s ease-in;
+}
+
+/* Card Tilt Effect on Hover (3D) */
+@media (hover: hover) and (pointer: fine) {
+  .tech-card:hover,
+  .solution-card:hover,
+  .industry-card:hover {
+    transform: perspective(1000px) rotateX(2deg) rotateY(2deg) translateY(-10px);
+  }
+}
+
+/* Enhanced Gallery Overlay */
+.gallery-overlay {
+  backdrop-filter: blur(5px);
+}
+
+/* Scale Animation for Categories */
+.category-number {
+  display: inline-block;
+}
+
+/* Smooth Transitions for All Interactive Elements */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button,
+a,
+input,
+textarea,
+select {
+  transition: all 0.3s ease;
+}
+
+/* Hover Effect for Capacity Cards */
+.capacity-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.capacity-card::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: radial-gradient(circle, rgba(27, 138, 90, 0.1), transparent);
+  transform: translate(-50%, -50%);
+  transition: width 0.5s ease, height 0.5s ease;
+  pointer-events: none;
+}
+
+.capacity-card:hover::after {
+  width: 300px;
+  height: 300px;
+}
+
+/* Animated Border for Forms on Focus */
+.form-control:focus,
+.form-select:focus {
+  animation: focusGlow 1.5s ease-in-out infinite;
+}
+
+@keyframes focusGlow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(27, 138, 90, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(27, 138, 90, 0.5), 0 0 30px rgba(27, 138, 90, 0.3);
+  }
+}
+
+/* Page Header Text Glow */
+.page-header h1 {
+  transition: all 0.3s ease;
+}
+
+.page-header h1:hover {
+  text-shadow: 
+    0 0 20px rgba(255, 255, 255, 0.5),
+    0 10px 30px rgba(0, 0, 0, 0.3),
+    0 5px 15px rgba(0, 0, 0, 0.2);
+  transform: scale(1.02);
+}
+
+/* Staggered Animation for Cards */
+.tech-card:nth-child(1),
+.solution-card:nth-child(1),
+.category-card:nth-child(1) {
+  animation: fadeInUp 0.6s ease-out 0.1s both;
+}
+
+.tech-card:nth-child(2),
+.solution-card:nth-child(2),
+.category-card:nth-child(2) {
+  animation: fadeInUp 0.6s ease-out 0.2s both;
+}
+
+.tech-card:nth-child(3),
+.solution-card:nth-child(3),
+.category-card:nth-child(3) {
+  animation: fadeInUp 0.6s ease-out 0.3s both;
+}
+
+.tech-card:nth-child(4),
+.solution-card:nth-child(4),
+.category-card:nth-child(4) {
+  animation: fadeInUp 0.6s ease-out 0.4s both;
+}
+
+.tech-card:nth-child(5),
+.solution-card:nth-child(5) {
+  animation: fadeInUp 0.6s ease-out 0.5s both;
+}
+
+.tech-card:nth-child(6),
+.solution-card:nth-child(6) {
+  animation: fadeInUp 0.6s ease-out 0.6s both;
+}
+
+/* Certification Logo Pulse */
+.cert-card img,
+.certification-card img {
+  transition: all 0.4s ease;
+}
+
+.cert-card:hover img,
+.certification-card:hover img {
+  transform: scale(1.1) rotate(5deg);
+  filter: drop-shadow(0 10px 20px rgba(27, 138, 90, 0.3));
+}
+
+/* Product Tag Enhanced Hover */
+.product-tag {
+  position: relative;
+  overflow: hidden;
+}
+
+.product-tag::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s ease;
+}
+
+.product-tag:hover::before {
+  left: 100%;
+}
+
+/* WhatsApp Button Shake Animation */
+.whatsapp-cta-card .btn:hover {
+  animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0) translateY(-3px); }
+  25% { transform: translateX(-5px) translateY(-3px); }
+  75% { transform: translateX(5px) translateY(-3px); }
+}
+
+/* Gallery Card Enhanced Interactivity */
+.gallery-card {
+  transform-origin: center;
+}
+
+.gallery-card:hover {
+  z-index: 10;
+}
+
+/* Smooth Color Transitions */
+.text-muted {
+  transition: color 0.3s ease;
+}
+
+/* Enhanced CTA Section */
+.cta-section .btn:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 15px 30px rgba(255, 255, 255, 0.3);
+}
+
+/* Navbar Shadow on Scroll Enhancement */
+.navbar {
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+/* Parameter Card Interactive Effect */
+.parameter-card {
+  cursor: pointer;
+}
+
+.parameter-card:hover .parameter-list li {
+  color: #1B8A5A;
+}
+
+/* QC Step Number Rotation */
+.qc-number {
+  transition: all 0.4s ease;
+}
+
+.qc-step-card:hover .qc-number {
+  transform: rotate(360deg) scale(1.1);
+}
+
+/* Hygiene Card List Animation */
+.hygiene-card:hover ul li {
+  animation: slideInLeft 0.3s ease forwards;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.hygiene-card ul li:nth-child(1) { animation-delay: 0.1s; }
+.hygiene-card ul li:nth-child(2) { animation-delay: 0.2s; }
+.hygiene-card ul li:nth-child(3) { animation-delay: 0.3s; }
+.hygiene-card ul li:nth-child(4) { animation-delay: 0.4s; }
+.hygiene-card ul li:nth-child(5) { animation-delay: 0.5s; }
+
+/* Responsive Hover Effects - Disable on Touch Devices */
+@media (hover: none) {
+  .tech-card:hover,
+  .solution-card:hover,
+  .category-card:hover,
+  .industry-card:hover {
+    transform: none;
+  }
+}
+
+/* ================= END OF ENHANCED HOVER ANIMATIONS ================= */
