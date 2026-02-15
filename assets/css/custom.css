@@ -65,22 +65,40 @@ body {
 }
 
 .navbar-brand {
-  transition: transform 0.3s ease;
+  transition: all 0.3s ease;
   transform-style: preserve-3d;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   font-weight: 800;
   font-family: 'Space Grotesk', 'Inter', sans-serif;
   letter-spacing: -0.5px;
-  background: var(--gradient-primary);
+  background: linear-gradient(135deg, #10B981 0%, #14B8A6 50%, #059669 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-shadow: none;
+  position: relative;
+  display: inline-block;
+}
+
+.navbar-brand::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #10B981, #14B8A6);
+  transition: width 0.3s ease;
+  border-radius: 2px;
 }
 
 .navbar-brand:hover {
   transform: scale(1.05) translateZ(10px);
-  filter: brightness(1.15) contrast(1.1);
+  filter: brightness(1.2) contrast(1.1) drop-shadow(0 0 8px rgba(16, 185, 129, 0.4));
+}
+
+.navbar-brand:hover::after {
+  width: 100%;
 }
 
 /* Navigation Items Container */
@@ -941,6 +959,36 @@ body {
 
 .facility-image-card:hover .overlay {
   transform: translateY(0);
+}
+
+/* ================= TECH DETAIL WITH IMAGES ================= */
+.tech-detail-image-wrapper {
+  width: 100%;
+  height: 180px;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 15px;
+  box-shadow: 0 6px 16px rgba(16, 185, 129, 0.2);
+  transition: all 0.4s ease;
+  border: 2px solid rgba(16, 185, 129, 0.15);
+}
+
+.tech-detail-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.4s ease;
+}
+
+.tech-detail-card:hover .tech-detail-image-wrapper {
+  box-shadow: 0 10px 24px rgba(16, 185, 129, 0.35);
+  border-color: var(--primary-green);
+  transform: scale(1.03);
+}
+
+.tech-detail-card:hover .tech-detail-image {
+  transform: scale(1.08);
+  filter: brightness(1.1);
 }
 
 /* ================= FOOTER 3D ================= */
@@ -2404,7 +2452,7 @@ card:hover::before {
 .tech-card {
   background: linear-gradient(135deg, white 0%, #ECFDF5 100%);
   border-radius: 24px;
-  padding: 35px 25px;
+  padding: 50px 40px;
   text-align: center;
   box-shadow: var(--shadow-md);
   border: 2px solid rgba(16, 185, 129, 0.15);
@@ -2412,6 +2460,7 @@ card:hover::before {
   transform-style: preserve-3d;
   position: relative;
   overflow: hidden;
+  min-height: 320px;
 }
 
 .tech-card::before {
@@ -2438,8 +2487,8 @@ card:hover::before {
 
 .tech-icon-wrapper {
   display: inline-block;
-  width: 90px;
-  height: 90px;
+  width: 120px;
+  height: 120px;
   background: linear-gradient(135deg, #ECFDF5, #D1FAE5);
   border-radius: 50%;
   display: flex;
@@ -2465,6 +2514,36 @@ card:hover::before {
   filter: brightness(0) invert(1);
 }
 
+/* Tech image wrapper for actual images */
+.tech-image-wrapper {
+  width: 100%;
+  height: 200px;
+  border-radius: 16px;
+  overflow: hidden;
+  margin: 0 auto 20px;
+  box-shadow: 0 8px 20px rgba(16, 185, 129, 0.25);
+  transition: all 0.5s ease;
+  border: 3px solid rgba(16, 185, 129, 0.2);
+}
+
+.tech-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.5s ease;
+}
+
+.tech-card:hover .tech-image-wrapper {
+  box-shadow: 0 12px 30px rgba(16, 185, 129, 0.4);
+  border-color: var(--primary-green);
+  transform: scale(1.05);
+}
+
+.tech-card:hover .tech-image {
+  transform: scale(1.1);
+  filter: brightness(1.1);
+}
+
 .tech-capacity {
   display: inline-block;
   background: var(--gradient-warm);
@@ -2475,6 +2554,43 @@ card:hover::before {
   font-weight: 700;
   margin-top: 12px;
   box-shadow: 0 4px 12px rgba(249, 115, 22, 0.3);
+}
+
+/* Tech cards within anchor tags */
+a .tech-card h4,
+a .tech-card p {
+  color: inherit;
+}
+
+a:hover .tech-card {
+  transform: translateY(-18px) translateZ(30px) scale(1.03);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--primary-green);
+}
+
+a:hover .tech-card::before {
+  opacity: 0.08;
+}
+
+a:hover .tech-card .tech-icon-wrapper {
+  transform: scale(1.2) rotate(360deg);
+  background: var(--gradient-primary);
+  box-shadow: 0 12px 30px rgba(16, 185, 129, 0.4);
+}
+
+a:hover .tech-card .tech-icon {
+  filter: brightness(0) invert(1);
+}
+
+a:hover .tech-card .tech-image-wrapper {
+  box-shadow: 0 12px 30px rgba(16, 185, 129, 0.4);
+  border-color: var(--primary-green);
+  transform: scale(1.05);
+}
+
+a:hover .tech-card .tech-image {
+  transform: scale(1.1);
+  filter: brightness(1.1);
 }
 
 /* ================= CATEGORY CARDS - REDESIGNED ================= */
@@ -2598,11 +2714,12 @@ a .category-card p {
 .cert-card {
   background: linear-gradient(135deg, white 0%, #ECFDF5 100%);
   border-radius: 18px;
-  padding: 30px 18px;
+  padding: 40px 25px;
   text-align: center;
   box-shadow: var(--shadow-md);
   border: 3px solid rgba(16, 185, 129, 0.2);
   transition: all 0.4s ease;
+  min-height: 280px;
 }
 
 .cert-card:hover {
@@ -2640,6 +2757,47 @@ a .category-card p {
   margin-top: 15px;
 }
 
+.cert-badge-large {
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(135deg, #ECFDF5, #D1FAE5);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 15px;
+  box-shadow: 0 8px 24px rgba(16, 185, 129, 0.25);
+  transition: all 0.4s ease;
+  border: 3px solid rgba(16, 185, 129, 0.3);
+}
+
+.cert-card:hover .cert-badge-large {
+  transform: scale(1.15) rotate(5deg);
+  background: var(--gradient-primary);
+  box-shadow: 0 12px 32px rgba(16, 185, 129, 0.4);
+  border-color: var(--primary-green);
+}
+
+.cert-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 120px;
+  transition: all 0.3s ease;
+}
+
+.cert-logo img {
+  max-height: 120px;
+  width: auto;
+  object-fit: contain;
+  transition: all 0.3s ease;
+}
+
+.cert-card:hover .cert-logo img {
+  transform: scale(1.1);
+  filter: drop-shadow(0 4px 12px rgba(16, 185, 129, 0.3));
+}
+
 /* ================= GALLERY - REDESIGNED ================= */
 .gallery-item {
   position: relative;
@@ -2659,7 +2817,7 @@ a .category-card p {
 
 .gallery-item img {
   width: 100%;
-  height: 260px;
+  height: 350px;
   object-fit: cover;
   transition: all 0.5s ease;
 }
@@ -2683,6 +2841,22 @@ a .category-card p {
 }
 
 .gallery-item:hover::before {
+  opacity: 0.15;
+}
+
+/* Gallery items within anchor tags */
+a:hover .gallery-item {
+  transform: scale(1.06);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--primary-light);
+}
+
+a:hover .gallery-item img {
+  transform: scale(1.15);
+  filter: brightness(1.15);
+}
+
+a:hover .gallery-item::before {
   opacity: 0.15;
 }
 
