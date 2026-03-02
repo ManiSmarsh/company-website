@@ -1,0 +1,566 @@
+:root {
+  --rfai-primary: #0f7a4b;
+  --rfai-primary-dark: #0b5b38;
+  --rfai-text: #1f2937;
+  --rfai-muted: #6b7280;
+  --rfai-border: #e5e7eb;
+  --rfai-bg: #f8fafb;
+}
+
+body.rfai-professional {
+  font-family: 'Inter', sans-serif;
+  color: var(--rfai-text);
+  background: var(--rfai-bg);
+  padding-top: 84px;
+}
+
+.rfai-professional .navbar {
+  background: rgba(255, 255, 255, 0.97) !important;
+  border-bottom: 1px solid var(--rfai-border);
+  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.06) !important;
+  padding: 0.95rem 0;
+  animation: none !important;
+}
+
+.rfai-professional .navbar-brand {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--rfai-primary) !important;
+  background: rgba(255, 255, 255, 0.92) !important;
+  -webkit-text-fill-color: var(--rfai-primary) !important;
+  transform: none !important;
+  filter: none !important;
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid #d7ebe1;
+  border-radius: 14px;
+  padding: 0.32rem 0.6rem;
+  box-shadow: 0 8px 20px rgba(15, 122, 75, 0.15);
+}
+
+.rfai-professional .rfai-logo {
+  height: 82px;
+  width: 320px;
+  object-fit: contain;
+  display: block;
+}
+
+.rfai-professional .navbar-brand::after,
+.rfai-professional .nav-link::after,
+.rfai-professional .nav-item::after,
+.rfai-professional .navbar .btn-success::before {
+  display: none !important;
+}
+
+.rfai-professional .nav-item {
+  animation: none !important;
+}
+
+.rfai-professional .nav-link {
+  border: 0 !important;
+  box-shadow: none !important;
+  color: #334155 !important;
+  padding: 0.52rem 0.9rem !important;
+  font-size: 0.92rem;
+  font-weight: 500;
+  border-radius: 999px;
+  background: transparent !important;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.25s ease, background-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease !important;
+}
+
+.rfai-professional .nav-link:hover,
+.rfai-professional .nav-link:focus {
+  color: var(--rfai-primary) !important;
+  background: linear-gradient(90deg, rgba(15, 122, 75, 0.1), rgba(15, 122, 75, 0.18)) !important;
+  box-shadow: 0 8px 22px rgba(15, 122, 75, 0.16) !important;
+  transform: translateY(-2px);
+}
+
+.rfai-professional .nav-link.active {
+  color: var(--rfai-primary) !important;
+  font-weight: 700;
+  background: linear-gradient(90deg, rgba(15, 122, 75, 0.14), rgba(15, 122, 75, 0.22)) !important;
+  box-shadow: 0 8px 24px rgba(15, 122, 75, 0.2) !important;
+}
+
+.rfai-professional .nav-link::before {
+  content: "";
+  position: absolute;
+  left: 18%;
+  right: 18%;
+  bottom: 5px;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #0f7a4b, #18a565);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.28s ease;
+}
+
+.rfai-professional .nav-link:hover::before,
+.rfai-professional .nav-link:focus::before,
+.rfai-professional .nav-link.active::before {
+  transform: scaleX(1);
+}
+
+.rfai-professional .btn-success {
+  background: var(--rfai-primary) !important;
+  border: 1px solid var(--rfai-primary) !important;
+  box-shadow: none !important;
+  border-radius: 10px;
+  font-weight: 600;
+  text-transform: none;
+  transform: none !important;
+  filter: none !important;
+}
+
+.rfai-professional .btn-success:hover,
+.rfai-professional .btn-success:focus {
+  background: var(--rfai-primary-dark) !important;
+  border-color: var(--rfai-primary-dark) !important;
+}
+
+.rfai-professional .btn,
+.rfai-professional .modern-submit-btn {
+  border-radius: 10px !important;
+  font-weight: 600 !important;
+  font-size: 0.95rem !important;
+  line-height: 1.2 !important;
+  padding: 0.7rem 1.35rem !important;
+  border-width: 1px !important;
+  text-transform: none !important;
+  box-shadow: none !important;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.2s ease !important;
+}
+
+.rfai-professional .btn-lg {
+  padding: 0.85rem 1.7rem !important;
+  font-size: 1rem !important;
+}
+
+.rfai-professional .btn-success,
+.rfai-professional .modern-submit-btn {
+  background: var(--rfai-primary) !important;
+  border-color: var(--rfai-primary) !important;
+  color: #ffffff !important;
+}
+
+.rfai-professional .btn-success:hover,
+.rfai-professional .btn-success:focus,
+.rfai-professional .modern-submit-btn:hover,
+.rfai-professional .modern-submit-btn:focus {
+  background: var(--rfai-primary-dark) !important;
+  border-color: var(--rfai-primary-dark) !important;
+  color: #ffffff !important;
+  transform: translateY(-1px);
+}
+
+.rfai-professional .btn-outline-success {
+  background: transparent !important;
+  border-color: var(--rfai-primary) !important;
+  color: var(--rfai-primary) !important;
+}
+
+.rfai-professional .btn-outline-success:hover,
+.rfai-professional .btn-outline-success:focus {
+  background: var(--rfai-primary) !important;
+  border-color: var(--rfai-primary) !important;
+  color: #ffffff !important;
+}
+
+.rfai-professional .btn-light {
+  background: #ffffff !important;
+  border-color: #ffffff !important;
+  color: var(--rfai-primary-dark) !important;
+}
+
+.rfai-professional .btn-light:hover,
+.rfai-professional .btn-light:focus {
+  background: #f3f4f6 !important;
+  border-color: #f3f4f6 !important;
+  color: var(--rfai-primary-dark) !important;
+}
+
+.rfai-professional .btn-outline-light {
+  background: transparent !important;
+  border-color: #ffffff !important;
+  color: #ffffff !important;
+}
+
+.rfai-professional .btn-outline-light:hover,
+.rfai-professional .btn-outline-light:focus {
+  background: #ffffff !important;
+  border-color: #ffffff !important;
+  color: var(--rfai-primary-dark) !important;
+}
+
+.rfai-professional .page-header {
+  padding: 92px 0 68px;
+  background: linear-gradient(120deg, #0f7a4b, #0b5b38) !important;
+}
+
+.rfai-professional .page-header::before,
+.rfai-professional .page-header::after,
+.rfai-professional .hero::before,
+.rfai-professional .cta-section::before,
+.rfai-professional .cta-section::after {
+  display: none !important;
+}
+
+.rfai-professional .page-header {
+  position: relative;
+  overflow: hidden;
+}
+
+.rfai-professional .page-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('../images/back_groung_image.png') center/cover no-repeat;
+  opacity: 0.16;
+  display: block !important;
+  pointer-events: none;
+}
+
+.rfai-professional .page-header .container {
+  position: relative;
+  z-index: 1;
+}
+
+.rfai-professional .facility-cta-match {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(120deg, #0f7a4b, #0b5b38) !important;
+}
+
+.rfai-professional .facility-cta-match::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('../images/back_groung_image.png') center/cover no-repeat;
+  background-attachment: scroll;
+  opacity: 0.16;
+  display: block !important;
+  pointer-events: none;
+  animation: none !important;
+  transition: none !important;
+  transform: none !important;
+}
+
+.rfai-professional .facility-cta-match::after {
+  display: none !important;
+}
+
+.rfai-professional .facility-cta-match .container {
+  position: relative;
+  z-index: 1;
+}
+
+.rfai-professional .rfai-footer {
+  border-top: 1px solid #0b5b38;
+  background: var(--rfai-primary);
+  color: #ffffff;
+}
+
+.rfai-professional .rfai-footer p {
+  margin-bottom: 0;
+  color: #ffffff;
+}
+
+.rfai-professional .rfai-footer .text-muted {
+  color: rgba(255, 255, 255, 0.88) !important;
+}
+
+.rfai-professional .page-header h1 {
+  text-shadow: none !important;
+  animation: none !important;
+}
+
+.rfai-professional .hero-stat {
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.26);
+  box-shadow: none;
+  transform: none !important;
+}
+
+.rfai-professional section {
+  position: relative;
+}
+
+.rfai-professional .bg-light,
+.rfai-professional .bg-light-green {
+  background: #f6f8fa !important;
+}
+
+.rfai-professional .glass-card,
+.rfai-professional .stylish-card,
+.rfai-professional .customer-card,
+.rfai-professional .accreditation-card,
+.rfai-professional .tech-card,
+.rfai-professional .category-card,
+.rfai-professional .capacity-card,
+.rfai-professional .solution-card,
+.rfai-professional .industry-card,
+.rfai-professional .cert-card,
+.rfai-professional .product-box,
+.rfai-professional .gallery-item,
+.rfai-professional .whatsapp-cta-card,
+.rfai-professional .lead-form,
+.rfai-professional .contact-form,
+.rfai-professional .contact-card,
+.rfai-professional .timeline-card,
+.rfai-professional .feature-card,
+.rfai-professional .quality-card,
+.rfai-professional .compliance-card {
+  background: #fff !important;
+  border: 1px solid var(--rfai-border) !important;
+  border-radius: 14px !important;
+  box-shadow: 0 10px 20px rgba(15, 23, 42, 0.06) !important;
+  transform: none !important;
+  backdrop-filter: none !important;
+}
+
+.rfai-professional .accreditation-card img {
+  width: 100%;
+  height: 110px;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+  margin: 0 auto 0.75rem;
+}
+
+.rfai-professional .glass-card:hover,
+.rfai-professional .stylish-card:hover,
+.rfai-professional .customer-card:hover,
+.rfai-professional .accreditation-card:hover,
+.rfai-professional .tech-card:hover,
+.rfai-professional .category-card:hover,
+.rfai-professional .capacity-card:hover,
+.rfai-professional .solution-card:hover,
+.rfai-professional .industry-card:hover,
+.rfai-professional .cert-card:hover,
+.rfai-professional .product-box:hover,
+.rfai-professional .gallery-item:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 14px 24px rgba(15, 23, 42, 0.09) !important;
+}
+
+.rfai-professional .section-title,
+.rfai-professional h2 {
+  color: #0f172a;
+}
+
+.rfai-professional h1,
+.rfai-professional h2,
+.rfai-professional h3,
+.rfai-professional h4,
+.rfai-professional h5,
+.rfai-professional h6 {
+  color: var(--rfai-primary-dark) !important;
+  background: none !important;
+  -webkit-text-fill-color: var(--rfai-primary-dark) !important;
+}
+
+.rfai-professional .page-header,
+.rfai-professional .rfai-cta,
+.rfai-professional .cta-section,
+.rfai-professional .bg-success,
+.rfai-professional .text-bg-success {
+  color: #ffffff !important;
+}
+
+.rfai-professional .page-header h1,
+.rfai-professional .page-header h2,
+.rfai-professional .page-header h3,
+.rfai-professional .page-header h4,
+.rfai-professional .page-header h5,
+.rfai-professional .page-header h6,
+.rfai-professional .rfai-cta h1,
+.rfai-professional .rfai-cta h2,
+.rfai-professional .rfai-cta h3,
+.rfai-professional .rfai-cta h4,
+.rfai-professional .rfai-cta h5,
+.rfai-professional .rfai-cta h6,
+.rfai-professional .cta-section h1,
+.rfai-professional .cta-section h2,
+.rfai-professional .cta-section h3,
+.rfai-professional .cta-section h4,
+.rfai-professional .cta-section h5,
+.rfai-professional .cta-section h6,
+.rfai-professional .bg-success h1,
+.rfai-professional .bg-success h2,
+.rfai-professional .bg-success h3,
+.rfai-professional .bg-success h4,
+.rfai-professional .bg-success h5,
+.rfai-professional .bg-success h6,
+.rfai-professional .text-bg-success h1,
+.rfai-professional .text-bg-success h2,
+.rfai-professional .text-bg-success h3,
+.rfai-professional .text-bg-success h4,
+.rfai-professional .text-bg-success h5,
+.rfai-professional .text-bg-success h6,
+.rfai-professional .page-header p,
+.rfai-professional .rfai-cta p,
+.rfai-professional .cta-section p,
+.rfai-professional .bg-success p,
+.rfai-professional .text-bg-success p,
+.rfai-professional .page-header span,
+.rfai-professional .rfai-cta span,
+.rfai-professional .cta-section span,
+.rfai-professional .bg-success span,
+.rfai-professional .text-bg-success span,
+.rfai-professional .page-header a,
+.rfai-professional .rfai-cta a,
+.rfai-professional .cta-section a,
+.rfai-professional .bg-success a,
+.rfai-professional .text-bg-success a,
+.rfai-professional .page-header li,
+.rfai-professional .rfai-cta li,
+.rfai-professional .cta-section li,
+.rfai-professional .bg-success li,
+.rfai-professional .text-bg-success li {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
+.rfai-professional .page-header .text-muted,
+.rfai-professional .rfai-cta .text-muted,
+.rfai-professional .cta-section .text-muted,
+.rfai-professional .bg-success .text-muted,
+.rfai-professional .text-bg-success .text-muted {
+  color: rgba(255, 255, 255, 0.88) !important;
+}
+
+.rfai-professional .page-header .btn-success,
+.rfai-professional .cta-section .btn-success,
+.rfai-professional .bg-success .btn-success,
+.rfai-professional .text-bg-success .btn-success,
+.rfai-professional .page-header .modern-submit-btn,
+.rfai-professional .cta-section .modern-submit-btn,
+.rfai-professional .bg-success .modern-submit-btn,
+.rfai-professional .text-bg-success .modern-submit-btn,
+.rfai-professional .page-header .btn-outline-success,
+.rfai-professional .cta-section .btn-outline-success,
+.rfai-professional .bg-success .btn-outline-success,
+.rfai-professional .text-bg-success .btn-outline-success,
+.rfai-professional .page-header .btn-outline-light,
+.rfai-professional .cta-section .btn-outline-light,
+.rfai-professional .bg-success .btn-outline-light,
+.rfai-professional .text-bg-success .btn-outline-light {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
+.rfai-professional .page-header .btn-light,
+.rfai-professional .rfai-cta .btn-light,
+.rfai-professional .cta-section .btn-light,
+.rfai-professional .bg-success .btn-light,
+.rfai-professional .text-bg-success .btn-light {
+  color: var(--rfai-primary-dark) !important;
+  -webkit-text-fill-color: var(--rfai-primary-dark) !important;
+}
+
+.rfai-professional .page-header .btn-outline-light:hover,
+.rfai-professional .cta-section .btn-outline-light:hover,
+.rfai-professional .bg-success .btn-outline-light:hover,
+.rfai-professional .text-bg-success .btn-outline-light:hover {
+  color: var(--rfai-primary-dark) !important;
+  -webkit-text-fill-color: var(--rfai-primary-dark) !important;
+}
+
+.rfai-professional p,
+.rfai-professional .text-muted {
+  color: var(--rfai-muted) !important;
+}
+
+.rfai-professional .form-control,
+.rfai-professional .form-select,
+.rfai-professional textarea {
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  box-shadow: none !important;
+}
+
+.rfai-professional .form-control:focus,
+.rfai-professional .form-select:focus,
+.rfai-professional textarea:focus {
+  border-color: var(--rfai-primary);
+  box-shadow: 0 0 0 0.2rem rgba(15, 122, 75, 0.12) !important;
+}
+
+.rfai-professional .table,
+.rfai-professional .table thead,
+.rfai-professional .table tbody {
+  border-color: var(--rfai-border);
+}
+
+.rfai-professional .cta-section {
+  background: var(--rfai-primary) !important;
+  padding: 72px 0;
+}
+
+.rfai-professional footer {
+  border-top: 1px solid var(--rfai-border) !important;
+  background: #fff !important;
+}
+
+.rfai-professional .animate-on-scroll,
+.rfai-professional .animated,
+.rfai-professional .fade-up,
+.rfai-professional .fade-left,
+.rfai-professional .fade-right,
+.rfai-professional .zoom-in,
+.rfai-professional .zoom-in-rotate,
+.rfai-professional .bounce-in,
+.rfai-professional .flip-in {
+  opacity: 1 !important;
+  transform: none !important;
+  animation: none !important;
+}
+
+@media (max-width: 991px) {
+  body.rfai-professional {
+    padding-top: 76px;
+  }
+
+  .rfai-professional .navbar-brand {
+    font-size: 1rem;
+    border-radius: 12px;
+    padding: 0.24rem 0.46rem;
+  }
+
+  .rfai-professional .rfai-logo {
+    height: 62px;
+    width: 240px;
+  }
+
+  .rfai-professional .navbar-collapse {
+    background: #fff;
+    margin-top: 0.75rem;
+    border: 1px solid var(--rfai-border);
+    border-radius: 12px;
+    box-shadow: none !important;
+    padding: 1rem;
+  }
+
+  .rfai-professional .nav-link {
+    width: 100%;
+    margin-bottom: 0.25rem;
+  }
+
+  .rfai-professional .accreditation-card img {
+    height: 90px;
+  }
+
+  .rfai-professional .navbar .btn-success {
+    margin-top: 0.5rem;
+    width: 100%;
+  }
+}

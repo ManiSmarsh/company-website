@@ -104,6 +104,7 @@ body {
 /* Navigation Items Container */
 .navbar-nav {
   gap: 0.25rem;
+  align-items: center;
 }
 
 .nav-item {
@@ -152,6 +153,9 @@ body {
   white-space: nowrap;
   border: 1.5px solid rgba(16, 185, 129, 0.2);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  display: inline-flex;
+  align-items: center;
+  line-height: 1.5;
 }
 
 .nav-link::after {
@@ -244,6 +248,9 @@ body {
   text-transform: uppercase;
   position: relative;
   overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  line-height: 1.5;
 }
 
 .navbar .btn-success::before {
@@ -356,7 +363,7 @@ body {
   min-height: 95vh;
   background: 
     linear-gradient(135deg, rgba(16, 185, 129, 0.95) 0%, rgba(20, 184, 166, 0.92) 50%, rgba(6, 182, 212, 0.9) 100%),
-    url('../images/hero.jpg') center/cover no-repeat;
+    url('../images/back_groung_image.png') center/cover no-repeat;
   display: flex;
   align-items: center;
   position: relative;
@@ -841,6 +848,196 @@ body {
   color: var(--primary-green);
 }
 
+/* Spray Dried Categories - Compact Layout */
+#spray-dried {
+  position: relative;
+  background-image: url('../images/spray_dried_BG.png');
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+#spray-dried::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.45);
+  pointer-events: none;
+}
+
+#spray-dried > .container {
+  position: relative;
+  z-index: 1;
+}
+
+#hpd {
+  position: relative;
+  background-image: url('../images/HPD_BG.png');
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+#freeze-dried {
+  position: relative;
+  background-image: url('../images/freeze_dried_bg.png');
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+#freeze-dried::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.45);
+  pointer-events: none;
+}
+
+#freeze-dried > .container {
+  position: relative;
+  z-index: 1;
+}
+
+#frozen {
+  position: relative;
+  background-image: url('../images/frozen_fruit_pulp_bg.png');
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+#frozen::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.45);
+  pointer-events: none;
+}
+
+#frozen > .container {
+  position: relative;
+  z-index: 1;
+}
+
+#hpd::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.45);
+  pointer-events: none;
+}
+
+#hpd > .container {
+  position: relative;
+  z-index: 1;
+}
+
+#spray-dried .spray-category,
+#hpd .hpd-category,
+#freeze-dried .fd-category,
+#frozen .frozen-category {
+  padding: 16px 12px;
+  border-radius: 14px;
+}
+
+#spray-dried .spray-category {
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+#spray-dried .spray-category h5,
+#hpd .hpd-category h5,
+#freeze-dried .fd-category h5,
+#frozen .frozen-category h5 {
+  font-size: 0.95rem;
+  margin-bottom: 10px !important;
+}
+
+#spray-dried .spray-category .product-list,
+#hpd .hpd-category .product-list,
+#freeze-dried .fd-category .product-list,
+#frozen .frozen-category .product-list {
+  max-height: 260px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+#spray-dried .spray-category .product-list li,
+#hpd .hpd-category .product-list li,
+#freeze-dried .fd-category .product-list li,
+#frozen .frozen-category .product-list li {
+  padding: 8px 10px;
+  margin-bottom: 6px;
+  font-size: 0.8rem;
+  border-left-width: 4px;
+  border-radius: 12px;
+}
+
+#spray-dried .spray-category .product-list li {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+#spray-dried .spray-category.spray-fruits {
+  background: transparent;
+  box-shadow: none;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+#spray-dried .spray-category.spray-fruits .product-list li {
+  background: transparent;
+}
+
+#spray-dried .spray-category .product-list li::after,
+#hpd .hpd-category .product-list li::after,
+#freeze-dried .fd-category .product-list li::after,
+#frozen .frozen-category .product-list li::after {
+  right: 10px;
+  font-size: 1rem;
+}
+
+#spray-dried .spray-app-list,
+#hpd .hpd-app-list,
+#freeze-dried .fd-app-list,
+#frozen .frozen-app-list {
+  max-height: none;
+  overflow-y: visible;
+  padding-right: 0;
+  column-count: 1;
+  column-gap: 14px;
+}
+
+#frozen .frozen-category .frozen-app-list {
+  max-height: none;
+  overflow-y: visible;
+}
+
+#spray-dried .spray-app-list li,
+#hpd .hpd-app-list li,
+#freeze-dried .fd-app-list li,
+#frozen .frozen-app-list li {
+  break-inside: avoid;
+}
+
+@media (min-width: 768px) {
+  #spray-dried .spray-app-list,
+  #hpd .hpd-app-list,
+  #freeze-dried .fd-app-list,
+  #frozen .frozen-app-list {
+    column-count: 2;
+  }
+}
+
+@media (min-width: 1200px) {
+  #spray-dried .spray-app-list,
+  #hpd .hpd-app-list,
+  #freeze-dried .fd-app-list,
+  #frozen .frozen-app-list {
+    column-count: 3;
+  }
+}
+
 /* ================= BUTTONS 3D - REDESIGNED ================= */
 .btn {
   transform-style: preserve-3d;
@@ -895,6 +1092,9 @@ body {
   transition: all 0.3s ease;
   transform-style: preserve-3d;
   border: 2px solid rgba(16, 185, 129, 0.1);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .product-showcase-card:hover {
@@ -904,14 +1104,34 @@ body {
 }
 
 .product-showcase-card img {
-  height: 220px;
-  object-fit: cover;
+  height: 460px;
+  object-fit: contain;
+  object-position: center;
   width: 100%;
-  transition: transform 0.4s ease;
+  display: block;
+  transition: none;
+}
+
+.product-showcase-card .showcase-spray-img {
+  object-fit: contain;
+  object-position: center;
+}
+
+.product-showcase-card .showcase-dehydrated-img {
+  object-fit: contain;
+  object-position: center;
 }
 
 .product-showcase-card:hover img {
-  transform: scale(1.12);
+  transform: none;
+}
+
+.product-showcase-card:hover .showcase-spray-img {
+  transform: none;
+}
+
+.product-showcase-card:hover .showcase-dehydrated-img {
+  transform: none;
 }
 
 /* ================= FACILITY IMAGE CARD ================= */
@@ -978,6 +1198,16 @@ body {
   height: 100%;
   object-fit: cover;
   transition: all 0.4s ease;
+}
+
+.infra-tech-section .tech-detail-image-wrapper {
+  height: 420px;
+}
+
+@media (max-width: 767.98px) {
+  .infra-tech-section .tech-detail-image-wrapper {
+    height: 320px;
+  }
 }
 
 .tech-detail-card:hover .tech-detail-image-wrapper {
@@ -2194,7 +2424,7 @@ h1, h2, h3 {
   background: var(--gradient-primary);
   color: white;
   padding: 12px 22px;
-  border- 25px;
+  border-radius: 25px;
   font-size: 0.95rem;
   font-weight: 700;
   border: none;
@@ -2322,6 +2552,30 @@ card:hover::before {
   margin: 0 auto;
 }
 
+.process-top-row,
+.process-second-row {
+  flex: 0 0 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+@media (min-width: 769px) {
+  .process-second-row {
+    flex-direction: row-reverse;
+  }
+
+  .process-second-row .process-arrow {
+    transform: rotate(180deg);
+  }
+
+  .process-second-row .process-arrow:hover {
+    transform: rotate(180deg) scale(1.3);
+  }
+}
+
 .process-step {
   background: white;
   border: 3px solid rgba(27, 138, 90, 0.2);
@@ -2397,9 +2651,66 @@ card:hover::before {
   transform: scale(1.3);
 }
 
+.process-step-with-down {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.process-arrow-down {
+  flex: 0 0 auto;
+  text-align: center;
+  color: #1B8A5A;
+  font-size: 1.9rem;
+  font-weight: 700;
+  opacity: 0.7;
+  line-height: 1;
+  position: relative;
+  padding: 6px 0 0;
+}
+
+.process-arrow-down::before {
+  content: '';
+  display: block;
+  width: 2px;
+  height: 18px;
+  margin: 0 auto 4px;
+  background: rgba(27, 138, 90, 0.35);
+  border-radius: 999px;
+}
+
+.process-arrow-down::after {
+  content: '';
+  display: block;
+  width: 2px;
+  height: 12px;
+  margin: 4px auto 0;
+  background: rgba(27, 138, 90, 0.2);
+  border-radius: 999px;
+}
+
+.process-bottom-row {
+  flex: 0 0 100%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+  flex-direction: row-reverse;
+  position: static;
+  margin-top: 8px;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .process-flow-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .process-top-row,
+  .process-second-row {
+    width: 100%;
     flex-direction: column;
     gap: 10px;
   }
@@ -2407,6 +2718,23 @@ card:hover::before {
   .process-arrow {
     transform: rotate(90deg);
     font-size: 1.5rem;
+  }
+
+  .process-arrow-down,
+  .process-arrow-left {
+    transform: none;
+    font-size: 1.5rem;
+  }
+
+  .process-step-with-down {
+    width: 100%;
+  }
+
+  .process-bottom-row {
+    position: static;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
   }
   
   .process-step {
@@ -3058,8 +3386,16 @@ a:hover .gallery-item::before {
   box-shadow: 0 12px 32px rgba(16, 185, 129, 0.4);
 }
 
+.cert-logo img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  transition: transform 0.5s ease;
+}
+
 .certification-card:hover .cert-logo img {
-  filter: brightness(0) invert(1);
+  filter: none;
+  transform: scale(1.03);
 }
 
 .qc-step-card {
